@@ -4,6 +4,8 @@
 // db/migration/migrations/1510262030_initial_schema.up.sql
 // db/migration/migrations/1510670987_update_unique_constraint_for_resource_caches.down.sql
 // db/migration/migrations/1510670987_update_unique_constraint_for_resource_caches.up.sql
+// db/migration/migrations/1511810746_create_resource_spaces.down.sql
+// db/migration/migrations/1511810746_create_resource_spaces.up.sql
 // db/migration/migrations/1513895878_update_timestamp_with_timezone.down.sql
 // db/migration/migrations/1513895878_update_timestamp_with_timezone.up.sql
 // db/migration/migrations/1516643303_update_auth_providers.down.go
@@ -114,7 +116,7 @@ func _1510262030_initial_schemaDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1510262030_initial_schema.down.sql", size: 993, mode: os.FileMode(420), modTime: time.Unix(1511280540, 0)}
+	info := bindataFileInfo{name: "1510262030_initial_schema.down.sql", size: 993, mode: os.FileMode(420), modTime: time.Unix(1525358955, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -134,7 +136,7 @@ func _1510262030_initial_schemaUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1510262030_initial_schema.up.sql", size: 38922, mode: os.FileMode(420), modTime: time.Unix(1511280540, 0)}
+	info := bindataFileInfo{name: "1510262030_initial_schema.up.sql", size: 38922, mode: os.FileMode(420), modTime: time.Unix(1525358955, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -154,7 +156,7 @@ func _1510670987_update_unique_constraint_for_resource_cachesDownSql() (*asset, 
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1510670987_update_unique_constraint_for_resource_caches.down.sql", size: 249, mode: os.FileMode(420), modTime: time.Unix(1511280540, 0)}
+	info := bindataFileInfo{name: "1510670987_update_unique_constraint_for_resource_caches.down.sql", size: 249, mode: os.FileMode(420), modTime: time.Unix(1525358955, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -174,7 +176,47 @@ func _1510670987_update_unique_constraint_for_resource_cachesUpSql() (*asset, er
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1510670987_update_unique_constraint_for_resource_caches.up.sql", size: 271, mode: os.FileMode(420), modTime: time.Unix(1511280540, 0)}
+	info := bindataFileInfo{name: "1510670987_update_unique_constraint_for_resource_caches.up.sql", size: 271, mode: os.FileMode(420), modTime: time.Unix(1525358955, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var __1511810746_create_resource_spacesDownSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x9c\x8f\xc1\x4a\xc5\x30\x10\x45\xf7\xf9\x8a\x59\x3e\xbf\xa1\xab\xbc\xe4\xbe\x47\xb0\x9d\x48\x9a\x85\xae\x82\xb4\x11\x8a\x60\x4b\xa3\x62\xff\x5e\x5a\x4b\x89\x54\xa4\xba\x1b\x98\xb9\xf7\x9c\x39\xe3\x6a\xb8\x10\x82\x48\x96\x1e\x8e\x0c\x6b\xdc\xd3\x7b\x1c\x53\xd7\xbf\xc4\x36\x8c\x31\xf5\x6f\x63\x13\xd3\x36\x85\x34\x3c\x36\x31\x74\x6d\xe8\xda\x0f\x72\x60\x59\x81\xbc\xfd\x3d\xb3\x5e\xff\x13\xf4\x3a\x0d\x31\xac\xa7\x7f\x20\xe6\xb1\x8c\xec\xe5\xb9\xc4\x4f\x61\xd2\xce\xde\x91\xb2\x5c\x7b\x27\x0d\x7b\xda\x9b\x3c\x3d\xc7\xe9\x50\xd5\x6a\xb9\x6b\x98\xbd\x33\xc7\x43\x5d\x52\xeb\xdc\x6a\x76\xc8\xff\xa4\x8b\x75\x30\x57\xa6\x5b\x3c\xd0\x29\x5b\xdc\x90\xc3\x05\x0e\xac\x50\x6f\xd0\x74\x9a\x17\x96\x49\xa3\x84\x07\x29\x59\x2b\xa9\xb1\x88\x2c\xff\x7f\x79\x7c\x17\x4f\x85\x10\xca\x56\x95\xf1\x85\xf8\x0c\x00\x00\xff\xff\xcf\xd2\x1f\xb6\x32\x02\x00\x00")
+
+func _1511810746_create_resource_spacesDownSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1511810746_create_resource_spacesDownSql,
+		"1511810746_create_resource_spaces.down.sql",
+	)
+}
+
+func _1511810746_create_resource_spacesDownSql() (*asset, error) {
+	bytes, err := _1511810746_create_resource_spacesDownSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1511810746_create_resource_spaces.down.sql", size: 562, mode: os.FileMode(420), modTime: time.Unix(1526479678, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var __1511810746_create_resource_spacesUpSql = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x94\x92\x4f\x6f\xa3\x30\x10\xc5\xef\x7c\x8a\x77\x03\xa4\x7c\x83\x9c\x5c\x98\x56\xd6\x82\xdd\x35\x8e\xb4\x3d\x59\xa8\x76\x24\x6b\xf3\xa7\x8b\x69\x45\xbf\xfd\x0a\x42\x08\xf9\xa3\x2a\x39\x70\xf1\xbc\xf9\xcd\x9b\xe1\x3d\xd1\x0b\x17\xcb\x28\x02\x32\x45\x4c\x13\x34\x7b\x2a\x08\x8d\x0b\xfb\xcf\xe6\xdd\x99\xf0\x51\xbf\xbb\x80\x24\x02\x00\x6f\x11\x5c\xe3\xeb\x0d\x5e\x15\x2f\x99\x7a\xc3\x2f\x7a\x5b\x0c\xa5\xa9\xc1\x5b\xf8\x5d\x0b\x45\xcf\xa4\x48\x64\x54\x4d\xa5\x80\xc4\xdb\x14\x52\x20\xa7\x82\x34\x21\x63\x55\xc6\x72\x3a\x00\x76\xf5\xd6\xa1\x75\x5d\x0b\x21\x35\xc4\xaa\x28\x0e\xef\x2b\xc1\x7f\xaf\x08\xc9\x6c\xc0\x62\x10\xa7\x11\x90\x0e\xce\xb9\xa8\x48\x69\x70\xa1\xe5\xa5\xf1\xa4\x57\x5f\xb7\xa2\xa2\x82\x32\x8d\xfe\xa1\xff\x62\xeb\xd6\xf5\xe7\xa6\x8d\xb1\x6e\xf6\xdb\x93\xe3\x01\x3f\x6a\x83\x6b\xbf\xea\x4d\x12\x5f\x4c\x30\xde\x9a\xe0\xfe\xc5\x0b\x24\xa3\x70\x5b\x77\xc3\xa2\x67\xa8\x51\x9d\x1e\x1c\xb3\x42\x93\x1a\x4f\xfd\xe5\x9a\xe0\xf7\x3b\x67\xcd\xe9\x50\x8a\x04\x2b\xe9\xec\xa8\x57\xbb\x19\x6f\xef\x62\xe5\x4a\xbe\x22\x93\xa2\xd2\x8a\x71\xa1\xb1\xfe\xeb\xbe\xcd\x8c\x7c\x17\x84\xe5\xf9\x9c\x71\xe5\xc4\xf4\x54\x3c\x4b\x45\xfc\x45\xf4\xa9\x98\xfd\xb0\xa3\x26\xbd\x15\x8a\x29\x60\x37\xa3\x31\xf3\xc6\x45\x4e\x7f\x6e\x79\x9b\xef\x62\xda\xef\x0f\x67\x46\xd1\xf1\x8a\x5a\xfe\xdc\x36\xed\x30\x6f\x7e\x78\xb2\xb7\xdd\xc3\x03\xbd\xed\x96\x51\x94\xc9\xb2\xe4\x7a\x19\xfd\x0f\x00\x00\xff\xff\xcf\xcb\xcd\x47\x8b\x03\x00\x00")
+
+func _1511810746_create_resource_spacesUpSqlBytes() ([]byte, error) {
+	return bindataRead(
+		__1511810746_create_resource_spacesUpSql,
+		"1511810746_create_resource_spaces.up.sql",
+	)
+}
+
+func _1511810746_create_resource_spacesUpSql() (*asset, error) {
+	bytes, err := _1511810746_create_resource_spacesUpSqlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "1511810746_create_resource_spaces.up.sql", size: 907, mode: os.FileMode(420), modTime: time.Unix(1526479678, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -194,7 +236,7 @@ func _1513895878_update_timestamp_with_timezoneDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1513895878_update_timestamp_with_timezone.down.sql", size: 1413, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1513895878_update_timestamp_with_timezone.down.sql", size: 1413, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -214,7 +256,7 @@ func _1513895878_update_timestamp_with_timezoneUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1513895878_update_timestamp_with_timezone.up.sql", size: 1404, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1513895878_update_timestamp_with_timezone.up.sql", size: 1404, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -234,7 +276,7 @@ func _1516643303_update_auth_providersDownGo() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1516643303_update_auth_providers.down.go", size: 2099, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1516643303_update_auth_providers.down.go", size: 2099, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -254,7 +296,7 @@ func _1516643303_update_auth_providersUpGo() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1516643303_update_auth_providers.up.go", size: 2048, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1516643303_update_auth_providers.up.go", size: 2048, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -274,7 +316,7 @@ func _1517330648_add_worker_resource_certsDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1517330648_add_worker_resource_certs.down.sql", size: 681, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1517330648_add_worker_resource_certs.down.sql", size: 681, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -294,7 +336,7 @@ func _1517330648_add_worker_resource_certsUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1517330648_add_worker_resource_certs.up.sql", size: 1140, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1517330648_add_worker_resource_certs.up.sql", size: 1140, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -314,7 +356,7 @@ func _1517585875_add_name_index_to_buildsDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1517585875_add_name_index_to_builds.down.sql", size: 41, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1517585875_add_name_index_to_builds.down.sql", size: 41, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -334,7 +376,7 @@ func _1517585875_add_name_index_to_buildsUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1517585875_add_name_index_to_builds.up.sql", size: 72, mode: os.FileMode(420), modTime: time.Unix(1518457224, 0)}
+	info := bindataFileInfo{name: "1517585875_add_name_index_to_builds.up.sql", size: 72, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -354,7 +396,7 @@ func _1520369727_drop_constraint_cannot_invalidate_during_initialization_from_vo
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.down.sql", size: 602, mode: os.FileMode(420), modTime: time.Unix(1520370118, 0)}
+	info := bindataFileInfo{name: "1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.down.sql", size: 602, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -374,7 +416,7 @@ func _1520369727_drop_constraint_cannot_invalidate_during_initialization_from_vo
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.up.sql", size: 100, mode: os.FileMode(420), modTime: time.Unix(1520370345, 0)}
+	info := bindataFileInfo{name: "1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.up.sql", size: 100, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -394,7 +436,7 @@ func _1520796340_drop_explicit_from_build_outputsDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1520796340_drop_explicit_from_build_outputs.down.sql", size: 76, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1520796340_drop_explicit_from_build_outputs.down.sql", size: 76, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -414,7 +456,7 @@ func _1520796340_drop_explicit_from_build_outputsUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1520796340_drop_explicit_from_build_outputs.up.sql", size: 121, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1520796340_drop_explicit_from_build_outputs.up.sql", size: 121, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -434,7 +476,7 @@ func _1520950708_add_tracked_by_to_buildsDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1520950708_add_tracked_by_to_builds.down.sql", size: 3430, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1520950708_add_tracked_by_to_builds.down.sql", size: 3430, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -454,7 +496,7 @@ func _1520950708_add_tracked_by_to_buildsUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1520950708_add_tracked_by_to_builds.up.sql", size: 3494, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1520950708_add_tracked_by_to_builds.up.sql", size: 3494, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -474,7 +516,7 @@ func _1521209088_drop_pipesDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1521209088_drop_pipes.down.sql", size: 380, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1521209088_drop_pipes.down.sql", size: 380, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -494,7 +536,7 @@ func _1521209088_drop_pipesUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1521209088_drop_pipes.up.sql", size: 35, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1521209088_drop_pipes.up.sql", size: 35, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -514,7 +556,7 @@ func _1522176230_add_tags_to_jobsDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1522176230_add_tags_to_jobs.down.sql", size: 54, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1522176230_add_tags_to_jobs.down.sql", size: 54, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -534,7 +576,7 @@ func _1522176230_add_tags_to_jobsUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1522176230_add_tags_to_jobs.up.sql", size: 60, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1522176230_add_tags_to_jobs.up.sql", size: 60, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -554,7 +596,7 @@ func _1522178770_add_job_tagsDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1522178770_add_job_tags.down.sql", size: 1, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1522178770_add_job_tags.down.sql", size: 1, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -574,7 +616,7 @@ func _1522178770_add_job_tagsUpGo() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1522178770_add_job_tags.up.go", size: 1475, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1522178770_add_job_tags.up.go", size: 1475, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -594,7 +636,7 @@ func _1523974520_add_worker_reaper_addrDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1523974520_add_worker_reaper_addr.down.sql", size: 64, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1523974520_add_worker_reaper_addr.down.sql", size: 64, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -614,7 +656,7 @@ func _1523974520_add_worker_reaper_addrUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1523974520_add_worker_reaper_addr.up.sql", size: 68, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1523974520_add_worker_reaper_addr.up.sql", size: 68, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -634,7 +676,7 @@ func _1524079655_update_reaper_addr_with_default_valueDownSql() (*asset, error) 
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1524079655_update_reaper_addr_with_default_value.down.sql", size: 78, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1524079655_update_reaper_addr_with_default_value.down.sql", size: 78, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -654,7 +696,7 @@ func _1524079655_update_reaper_addr_with_default_valueUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1524079655_update_reaper_addr_with_default_value.up.sql", size: 86, mode: os.FileMode(420), modTime: time.Unix(1524239607, 0)}
+	info := bindataFileInfo{name: "1524079655_update_reaper_addr_with_default_value.up.sql", size: 86, mode: os.FileMode(420), modTime: time.Unix(1525442854, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -674,7 +716,7 @@ func _1525442981_create_version_resources_check_order_indexDownSql() (*asset, er
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1525442981_create_version_resources_check_order_index.down.sql", size: 61, mode: os.FileMode(420), modTime: time.Unix(1525446779, 0)}
+	info := bindataFileInfo{name: "1525442981_create_version_resources_check_order_index.down.sql", size: 61, mode: os.FileMode(420), modTime: time.Unix(1525701295, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -694,7 +736,7 @@ func _1525442981_create_version_resources_check_order_indexUpSql() (*asset, erro
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1525442981_create_version_resources_check_order_index.up.sql", size: 105, mode: os.FileMode(420), modTime: time.Unix(1525446779, 0)}
+	info := bindataFileInfo{name: "1525442981_create_version_resources_check_order_index.up.sql", size: 105, mode: os.FileMode(420), modTime: time.Unix(1525701295, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -714,7 +756,7 @@ func _1525724789_drop_reaper_addr_from_workersDownSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1525724789_drop_reaper_addr_from_workers.down.sql", size: 72, mode: os.FileMode(420), modTime: time.Unix(1525801877, 0)}
+	info := bindataFileInfo{name: "1525724789_drop_reaper_addr_from_workers.down.sql", size: 72, mode: os.FileMode(420), modTime: time.Unix(1525983186, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -734,7 +776,7 @@ func _1525724789_drop_reaper_addr_from_workersUpSql() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "1525724789_drop_reaper_addr_from_workers.up.sql", size: 64, mode: os.FileMode(420), modTime: time.Unix(1525794826, 0)}
+	info := bindataFileInfo{name: "1525724789_drop_reaper_addr_from_workers.up.sql", size: 64, mode: os.FileMode(420), modTime: time.Unix(1525983186, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -791,38 +833,40 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"1510262030_initial_schema.down.sql":                                                       _1510262030_initial_schemaDownSql,
-	"1510262030_initial_schema.up.sql":                                                         _1510262030_initial_schemaUpSql,
-	"1510670987_update_unique_constraint_for_resource_caches.down.sql":                         _1510670987_update_unique_constraint_for_resource_cachesDownSql,
-	"1510670987_update_unique_constraint_for_resource_caches.up.sql":                           _1510670987_update_unique_constraint_for_resource_cachesUpSql,
-	"1513895878_update_timestamp_with_timezone.down.sql":                                       _1513895878_update_timestamp_with_timezoneDownSql,
-	"1513895878_update_timestamp_with_timezone.up.sql":                                         _1513895878_update_timestamp_with_timezoneUpSql,
-	"1516643303_update_auth_providers.down.go":                                                 _1516643303_update_auth_providersDownGo,
-	"1516643303_update_auth_providers.up.go":                                                   _1516643303_update_auth_providersUpGo,
-	"1517330648_add_worker_resource_certs.down.sql":                                            _1517330648_add_worker_resource_certsDownSql,
-	"1517330648_add_worker_resource_certs.up.sql":                                              _1517330648_add_worker_resource_certsUpSql,
-	"1517585875_add_name_index_to_builds.down.sql":                                             _1517585875_add_name_index_to_buildsDownSql,
-	"1517585875_add_name_index_to_builds.up.sql":                                               _1517585875_add_name_index_to_buildsUpSql,
+	"1510262030_initial_schema.down.sql": _1510262030_initial_schemaDownSql,
+	"1510262030_initial_schema.up.sql": _1510262030_initial_schemaUpSql,
+	"1510670987_update_unique_constraint_for_resource_caches.down.sql": _1510670987_update_unique_constraint_for_resource_cachesDownSql,
+	"1510670987_update_unique_constraint_for_resource_caches.up.sql": _1510670987_update_unique_constraint_for_resource_cachesUpSql,
+	"1511810746_create_resource_spaces.down.sql": _1511810746_create_resource_spacesDownSql,
+	"1511810746_create_resource_spaces.up.sql": _1511810746_create_resource_spacesUpSql,
+	"1513895878_update_timestamp_with_timezone.down.sql": _1513895878_update_timestamp_with_timezoneDownSql,
+	"1513895878_update_timestamp_with_timezone.up.sql": _1513895878_update_timestamp_with_timezoneUpSql,
+	"1516643303_update_auth_providers.down.go": _1516643303_update_auth_providersDownGo,
+	"1516643303_update_auth_providers.up.go": _1516643303_update_auth_providersUpGo,
+	"1517330648_add_worker_resource_certs.down.sql": _1517330648_add_worker_resource_certsDownSql,
+	"1517330648_add_worker_resource_certs.up.sql": _1517330648_add_worker_resource_certsUpSql,
+	"1517585875_add_name_index_to_builds.down.sql": _1517585875_add_name_index_to_buildsDownSql,
+	"1517585875_add_name_index_to_builds.up.sql": _1517585875_add_name_index_to_buildsUpSql,
 	"1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.down.sql": _1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumesDownSql,
-	"1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.up.sql":   _1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumesUpSql,
-	"1520796340_drop_explicit_from_build_outputs.down.sql":                                     _1520796340_drop_explicit_from_build_outputsDownSql,
-	"1520796340_drop_explicit_from_build_outputs.up.sql":                                       _1520796340_drop_explicit_from_build_outputsUpSql,
-	"1520950708_add_tracked_by_to_builds.down.sql":                                             _1520950708_add_tracked_by_to_buildsDownSql,
-	"1520950708_add_tracked_by_to_builds.up.sql":                                               _1520950708_add_tracked_by_to_buildsUpSql,
-	"1521209088_drop_pipes.down.sql":                                                           _1521209088_drop_pipesDownSql,
-	"1521209088_drop_pipes.up.sql":                                                             _1521209088_drop_pipesUpSql,
-	"1522176230_add_tags_to_jobs.down.sql":                                                     _1522176230_add_tags_to_jobsDownSql,
-	"1522176230_add_tags_to_jobs.up.sql":                                                       _1522176230_add_tags_to_jobsUpSql,
-	"1522178770_add_job_tags.down.sql":                                                         _1522178770_add_job_tagsDownSql,
-	"1522178770_add_job_tags.up.go":                                                            _1522178770_add_job_tagsUpGo,
-	"1523974520_add_worker_reaper_addr.down.sql":                                               _1523974520_add_worker_reaper_addrDownSql,
-	"1523974520_add_worker_reaper_addr.up.sql":                                                 _1523974520_add_worker_reaper_addrUpSql,
-	"1524079655_update_reaper_addr_with_default_value.down.sql":                                _1524079655_update_reaper_addr_with_default_valueDownSql,
-	"1524079655_update_reaper_addr_with_default_value.up.sql":                                  _1524079655_update_reaper_addr_with_default_valueUpSql,
-	"1525442981_create_version_resources_check_order_index.down.sql":                           _1525442981_create_version_resources_check_order_indexDownSql,
-	"1525442981_create_version_resources_check_order_index.up.sql":                             _1525442981_create_version_resources_check_order_indexUpSql,
-	"1525724789_drop_reaper_addr_from_workers.down.sql":                                        _1525724789_drop_reaper_addr_from_workersDownSql,
-	"1525724789_drop_reaper_addr_from_workers.up.sql":                                          _1525724789_drop_reaper_addr_from_workersUpSql,
+	"1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.up.sql": _1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumesUpSql,
+	"1520796340_drop_explicit_from_build_outputs.down.sql": _1520796340_drop_explicit_from_build_outputsDownSql,
+	"1520796340_drop_explicit_from_build_outputs.up.sql": _1520796340_drop_explicit_from_build_outputsUpSql,
+	"1520950708_add_tracked_by_to_builds.down.sql": _1520950708_add_tracked_by_to_buildsDownSql,
+	"1520950708_add_tracked_by_to_builds.up.sql": _1520950708_add_tracked_by_to_buildsUpSql,
+	"1521209088_drop_pipes.down.sql": _1521209088_drop_pipesDownSql,
+	"1521209088_drop_pipes.up.sql": _1521209088_drop_pipesUpSql,
+	"1522176230_add_tags_to_jobs.down.sql": _1522176230_add_tags_to_jobsDownSql,
+	"1522176230_add_tags_to_jobs.up.sql": _1522176230_add_tags_to_jobsUpSql,
+	"1522178770_add_job_tags.down.sql": _1522178770_add_job_tagsDownSql,
+	"1522178770_add_job_tags.up.go": _1522178770_add_job_tagsUpGo,
+	"1523974520_add_worker_reaper_addr.down.sql": _1523974520_add_worker_reaper_addrDownSql,
+	"1523974520_add_worker_reaper_addr.up.sql": _1523974520_add_worker_reaper_addrUpSql,
+	"1524079655_update_reaper_addr_with_default_value.down.sql": _1524079655_update_reaper_addr_with_default_valueDownSql,
+	"1524079655_update_reaper_addr_with_default_value.up.sql": _1524079655_update_reaper_addr_with_default_valueUpSql,
+	"1525442981_create_version_resources_check_order_index.down.sql": _1525442981_create_version_resources_check_order_indexDownSql,
+	"1525442981_create_version_resources_check_order_index.up.sql": _1525442981_create_version_resources_check_order_indexUpSql,
+	"1525724789_drop_reaper_addr_from_workers.down.sql": _1525724789_drop_reaper_addr_from_workersDownSql,
+	"1525724789_drop_reaper_addr_from_workers.up.sql": _1525724789_drop_reaper_addr_from_workersUpSql,
 }
 
 // AssetDir returns the file names below a certain
@@ -864,40 +908,41 @@ type bintree struct {
 	Func     func() (*asset, error)
 	Children map[string]*bintree
 }
-
 var _bintree = &bintree{nil, map[string]*bintree{
-	"1510262030_initial_schema.down.sql":                                                       &bintree{_1510262030_initial_schemaDownSql, map[string]*bintree{}},
-	"1510262030_initial_schema.up.sql":                                                         &bintree{_1510262030_initial_schemaUpSql, map[string]*bintree{}},
-	"1510670987_update_unique_constraint_for_resource_caches.down.sql":                         &bintree{_1510670987_update_unique_constraint_for_resource_cachesDownSql, map[string]*bintree{}},
-	"1510670987_update_unique_constraint_for_resource_caches.up.sql":                           &bintree{_1510670987_update_unique_constraint_for_resource_cachesUpSql, map[string]*bintree{}},
-	"1513895878_update_timestamp_with_timezone.down.sql":                                       &bintree{_1513895878_update_timestamp_with_timezoneDownSql, map[string]*bintree{}},
-	"1513895878_update_timestamp_with_timezone.up.sql":                                         &bintree{_1513895878_update_timestamp_with_timezoneUpSql, map[string]*bintree{}},
-	"1516643303_update_auth_providers.down.go":                                                 &bintree{_1516643303_update_auth_providersDownGo, map[string]*bintree{}},
-	"1516643303_update_auth_providers.up.go":                                                   &bintree{_1516643303_update_auth_providersUpGo, map[string]*bintree{}},
-	"1517330648_add_worker_resource_certs.down.sql":                                            &bintree{_1517330648_add_worker_resource_certsDownSql, map[string]*bintree{}},
-	"1517330648_add_worker_resource_certs.up.sql":                                              &bintree{_1517330648_add_worker_resource_certsUpSql, map[string]*bintree{}},
-	"1517585875_add_name_index_to_builds.down.sql":                                             &bintree{_1517585875_add_name_index_to_buildsDownSql, map[string]*bintree{}},
-	"1517585875_add_name_index_to_builds.up.sql":                                               &bintree{_1517585875_add_name_index_to_buildsUpSql, map[string]*bintree{}},
+	"1510262030_initial_schema.down.sql": &bintree{_1510262030_initial_schemaDownSql, map[string]*bintree{}},
+	"1510262030_initial_schema.up.sql": &bintree{_1510262030_initial_schemaUpSql, map[string]*bintree{}},
+	"1510670987_update_unique_constraint_for_resource_caches.down.sql": &bintree{_1510670987_update_unique_constraint_for_resource_cachesDownSql, map[string]*bintree{}},
+	"1510670987_update_unique_constraint_for_resource_caches.up.sql": &bintree{_1510670987_update_unique_constraint_for_resource_cachesUpSql, map[string]*bintree{}},
+	"1511810746_create_resource_spaces.down.sql": &bintree{_1511810746_create_resource_spacesDownSql, map[string]*bintree{}},
+	"1511810746_create_resource_spaces.up.sql": &bintree{_1511810746_create_resource_spacesUpSql, map[string]*bintree{}},
+	"1513895878_update_timestamp_with_timezone.down.sql": &bintree{_1513895878_update_timestamp_with_timezoneDownSql, map[string]*bintree{}},
+	"1513895878_update_timestamp_with_timezone.up.sql": &bintree{_1513895878_update_timestamp_with_timezoneUpSql, map[string]*bintree{}},
+	"1516643303_update_auth_providers.down.go": &bintree{_1516643303_update_auth_providersDownGo, map[string]*bintree{}},
+	"1516643303_update_auth_providers.up.go": &bintree{_1516643303_update_auth_providersUpGo, map[string]*bintree{}},
+	"1517330648_add_worker_resource_certs.down.sql": &bintree{_1517330648_add_worker_resource_certsDownSql, map[string]*bintree{}},
+	"1517330648_add_worker_resource_certs.up.sql": &bintree{_1517330648_add_worker_resource_certsUpSql, map[string]*bintree{}},
+	"1517585875_add_name_index_to_builds.down.sql": &bintree{_1517585875_add_name_index_to_buildsDownSql, map[string]*bintree{}},
+	"1517585875_add_name_index_to_builds.up.sql": &bintree{_1517585875_add_name_index_to_buildsUpSql, map[string]*bintree{}},
 	"1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.down.sql": &bintree{_1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumesDownSql, map[string]*bintree{}},
-	"1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.up.sql":   &bintree{_1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumesUpSql, map[string]*bintree{}},
-	"1520796340_drop_explicit_from_build_outputs.down.sql":                                     &bintree{_1520796340_drop_explicit_from_build_outputsDownSql, map[string]*bintree{}},
-	"1520796340_drop_explicit_from_build_outputs.up.sql":                                       &bintree{_1520796340_drop_explicit_from_build_outputsUpSql, map[string]*bintree{}},
-	"1520950708_add_tracked_by_to_builds.down.sql":                                             &bintree{_1520950708_add_tracked_by_to_buildsDownSql, map[string]*bintree{}},
-	"1520950708_add_tracked_by_to_builds.up.sql":                                               &bintree{_1520950708_add_tracked_by_to_buildsUpSql, map[string]*bintree{}},
-	"1521209088_drop_pipes.down.sql":                                                           &bintree{_1521209088_drop_pipesDownSql, map[string]*bintree{}},
-	"1521209088_drop_pipes.up.sql":                                                             &bintree{_1521209088_drop_pipesUpSql, map[string]*bintree{}},
-	"1522176230_add_tags_to_jobs.down.sql":                                                     &bintree{_1522176230_add_tags_to_jobsDownSql, map[string]*bintree{}},
-	"1522176230_add_tags_to_jobs.up.sql":                                                       &bintree{_1522176230_add_tags_to_jobsUpSql, map[string]*bintree{}},
-	"1522178770_add_job_tags.down.sql":                                                         &bintree{_1522178770_add_job_tagsDownSql, map[string]*bintree{}},
-	"1522178770_add_job_tags.up.go":                                                            &bintree{_1522178770_add_job_tagsUpGo, map[string]*bintree{}},
-	"1523974520_add_worker_reaper_addr.down.sql":                                               &bintree{_1523974520_add_worker_reaper_addrDownSql, map[string]*bintree{}},
-	"1523974520_add_worker_reaper_addr.up.sql":                                                 &bintree{_1523974520_add_worker_reaper_addrUpSql, map[string]*bintree{}},
-	"1524079655_update_reaper_addr_with_default_value.down.sql":                                &bintree{_1524079655_update_reaper_addr_with_default_valueDownSql, map[string]*bintree{}},
-	"1524079655_update_reaper_addr_with_default_value.up.sql":                                  &bintree{_1524079655_update_reaper_addr_with_default_valueUpSql, map[string]*bintree{}},
-	"1525442981_create_version_resources_check_order_index.down.sql":                           &bintree{_1525442981_create_version_resources_check_order_indexDownSql, map[string]*bintree{}},
-	"1525442981_create_version_resources_check_order_index.up.sql":                             &bintree{_1525442981_create_version_resources_check_order_indexUpSql, map[string]*bintree{}},
-	"1525724789_drop_reaper_addr_from_workers.down.sql":                                        &bintree{_1525724789_drop_reaper_addr_from_workersDownSql, map[string]*bintree{}},
-	"1525724789_drop_reaper_addr_from_workers.up.sql":                                          &bintree{_1525724789_drop_reaper_addr_from_workersUpSql, map[string]*bintree{}},
+	"1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumes.up.sql": &bintree{_1520369727_drop_constraint_cannot_invalidate_during_initialization_from_volumesUpSql, map[string]*bintree{}},
+	"1520796340_drop_explicit_from_build_outputs.down.sql": &bintree{_1520796340_drop_explicit_from_build_outputsDownSql, map[string]*bintree{}},
+	"1520796340_drop_explicit_from_build_outputs.up.sql": &bintree{_1520796340_drop_explicit_from_build_outputsUpSql, map[string]*bintree{}},
+	"1520950708_add_tracked_by_to_builds.down.sql": &bintree{_1520950708_add_tracked_by_to_buildsDownSql, map[string]*bintree{}},
+	"1520950708_add_tracked_by_to_builds.up.sql": &bintree{_1520950708_add_tracked_by_to_buildsUpSql, map[string]*bintree{}},
+	"1521209088_drop_pipes.down.sql": &bintree{_1521209088_drop_pipesDownSql, map[string]*bintree{}},
+	"1521209088_drop_pipes.up.sql": &bintree{_1521209088_drop_pipesUpSql, map[string]*bintree{}},
+	"1522176230_add_tags_to_jobs.down.sql": &bintree{_1522176230_add_tags_to_jobsDownSql, map[string]*bintree{}},
+	"1522176230_add_tags_to_jobs.up.sql": &bintree{_1522176230_add_tags_to_jobsUpSql, map[string]*bintree{}},
+	"1522178770_add_job_tags.down.sql": &bintree{_1522178770_add_job_tagsDownSql, map[string]*bintree{}},
+	"1522178770_add_job_tags.up.go": &bintree{_1522178770_add_job_tagsUpGo, map[string]*bintree{}},
+	"1523974520_add_worker_reaper_addr.down.sql": &bintree{_1523974520_add_worker_reaper_addrDownSql, map[string]*bintree{}},
+	"1523974520_add_worker_reaper_addr.up.sql": &bintree{_1523974520_add_worker_reaper_addrUpSql, map[string]*bintree{}},
+	"1524079655_update_reaper_addr_with_default_value.down.sql": &bintree{_1524079655_update_reaper_addr_with_default_valueDownSql, map[string]*bintree{}},
+	"1524079655_update_reaper_addr_with_default_value.up.sql": &bintree{_1524079655_update_reaper_addr_with_default_valueUpSql, map[string]*bintree{}},
+	"1525442981_create_version_resources_check_order_index.down.sql": &bintree{_1525442981_create_version_resources_check_order_indexDownSql, map[string]*bintree{}},
+	"1525442981_create_version_resources_check_order_index.up.sql": &bintree{_1525442981_create_version_resources_check_order_indexUpSql, map[string]*bintree{}},
+	"1525724789_drop_reaper_addr_from_workers.down.sql": &bintree{_1525724789_drop_reaper_addr_from_workersDownSql, map[string]*bintree{}},
+	"1525724789_drop_reaper_addr_from_workers.up.sql": &bintree{_1525724789_drop_reaper_addr_from_workersUpSql, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory
@@ -946,3 +991,4 @@ func _filePath(dir, name string) string {
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
+
