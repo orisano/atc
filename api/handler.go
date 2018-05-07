@@ -44,6 +44,7 @@ func NewHandler(
 	dbTeamFactory db.TeamFactory,
 	dbPipelineFactory db.PipelineFactory,
 	dbJobFactory db.JobFactory,
+	dbSpaceJobFactory db.SpaceJobFactory,
 	dbWorkerFactory db.WorkerFactory,
 	volumeRepository db.VolumeRepository,
 	containerRepository db.ContainerRepository,
@@ -84,7 +85,7 @@ func NewHandler(
 	teamHandlerFactory := NewTeamScopedHandlerFactory(logger, dbTeamFactory)
 
 	buildServer := buildserver.NewServer(logger, externalURL, peerURL, engine, workerClient, dbTeamFactory, dbBuildFactory, eventHandlerFactory, drain)
-	jobServer := jobserver.NewServer(logger, schedulerFactory, externalURL, variablesFactory, dbJobFactory)
+	jobServer := jobserver.NewServer(logger, schedulerFactory, externalURL, variablesFactory, dbJobFactory, dbSpaceJobFactory)
 	resourceServer := resourceserver.NewServer(logger, scannerFactory, variablesFactory)
 	versionServer := versionserver.NewServer(logger, externalURL)
 	pipelineServer := pipelineserver.NewServer(logger, dbTeamFactory, dbPipelineFactory, externalURL, engine)
@@ -113,17 +114,20 @@ func NewHandler(
 		atc.SendInputToBuildPlan:    buildHandlerFactory.HandlerFor(buildServer.SendInputToBuildPlan),
 		atc.ReadOutputFromBuildPlan: buildHandlerFactory.HandlerFor(buildServer.ReadOutputFromBuildPlan),
 
-		atc.ListAllJobs:    http.HandlerFunc(jobServer.ListAllJobs),
-		atc.ListJobs:       pipelineHandlerFactory.HandlerFor(jobServer.ListJobs),
-		atc.GetJob:         pipelineHandlerFactory.HandlerFor(jobServer.GetJob),
-		atc.ListJobBuilds:  pipelineHandlerFactory.HandlerFor(jobServer.ListJobBuilds),
-		atc.ListJobInputs:  pipelineHandlerFactory.HandlerFor(jobServer.ListJobInputs),
-		atc.GetJobBuild:    pipelineHandlerFactory.HandlerFor(jobServer.GetJobBuild),
-		atc.CreateJobBuild: pipelineHandlerFactory.HandlerFor(jobServer.CreateJobBuild),
-		atc.PauseJob:       pipelineHandlerFactory.HandlerFor(jobServer.PauseJob),
-		atc.UnpauseJob:     pipelineHandlerFactory.HandlerFor(jobServer.UnpauseJob),
-		atc.JobBadge:       pipelineHandlerFactory.HandlerFor(jobServer.JobBadge),
-		atc.MainJobBadge:   mainredirect.Handler{atc.Routes, atc.JobBadge},
+		atc.ListAllJobs:              http.HandlerFunc(jobServer.ListAllJobs),
+		atc.ListSpaceJobs:            pipelineHandlerFactory.HandlerFor(jobServer.ListSpaceJobs),
+		atc.ListJobs:                 pipelineHandlerFactory.HandlerFor(jobServer.ListJobs),
+		atc.GetJob:                   pipelineHandlerFactory.HandlerFor(jobServer.GetJob),
+		atc.ListJobBuilds:            pipelineHandlerFactory.HandlerFor(jobServer.ListJobBuilds),
+		atc.ListJobCombinationBuilds: pipelineHandlerFactory.HandlerFor(jobServer.ListJobCombinationBuilds),
+		atc.ListJobInputs:            pipelineHandlerFactory.HandlerFor(jobServer.ListJobInputs),
+		atc.GetJobBuild:              pipelineHandlerFactory.HandlerFor(jobServer.GetJobBuild),
+		atc.GetJobCombinationBuild:   pipelineHandlerFactory.HandlerFor(jobServer.GetJobCombinationBuild),
+		atc.CreateJobBuild:           pipelineHandlerFactory.HandlerFor(jobServer.CreateJobBuild),
+		atc.PauseJob:                 pipelineHandlerFactory.HandlerFor(jobServer.PauseJob),
+		atc.UnpauseJob:               pipelineHandlerFactory.HandlerFor(jobServer.UnpauseJob),
+		atc.JobBadge:                 pipelineHandlerFactory.HandlerFor(jobServer.JobBadge),
+		atc.MainJobBadge:             mainredirect.Handler{atc.Routes, atc.JobBadge},
 
 		atc.ListAllPipelines:    http.HandlerFunc(pipelineServer.ListAllPipelines),
 		atc.ListPipelines:       http.HandlerFunc(pipelineServer.ListPipelines),
@@ -142,6 +146,7 @@ func NewHandler(
 
 		atc.ListResources:        pipelineHandlerFactory.HandlerFor(resourceServer.ListResources),
 		atc.ListResourceTypes:    pipelineHandlerFactory.HandlerFor(resourceServer.ListVersionedResourceTypes),
+		atc.ListSpaceResources:   pipelineHandlerFactory.HandlerFor(resourceServer.ListSpaceResources),
 		atc.GetResource:          pipelineHandlerFactory.HandlerFor(resourceServer.GetResource),
 		atc.PauseResource:        pipelineHandlerFactory.HandlerFor(resourceServer.PauseResource),
 		atc.UnpauseResource:      pipelineHandlerFactory.HandlerFor(resourceServer.UnpauseResource),

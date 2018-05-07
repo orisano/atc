@@ -45,6 +45,7 @@ var (
 	dbTeamFactory           *dbfakes.FakeTeamFactory
 	dbPipelineFactory       *dbfakes.FakePipelineFactory
 	dbJobFactory            *dbfakes.FakeJobFactory
+	dbSpaceJobFactory       *dbfakes.FakeSpaceJobFactory
 	fakePipeline            *dbfakes.FakePipeline
 	fakeAccessor            *accessorfakes.FakeAccessFactory
 	dbWorkerFactory         *dbfakes.FakeWorkerFactory
@@ -171,6 +172,7 @@ var _ = BeforeEach(func() {
 		dbTeamFactory,
 		dbPipelineFactory,
 		dbJobFactory,
+		dbSpaceJobFactory,
 		dbWorkerFactory,
 		fakeVolumeRepository,
 		fakeContainerRepository,
