@@ -13,6 +13,7 @@ import (
 	"github.com/concourse/atc/api/cliserver"
 	"github.com/concourse/atc/api/configserver"
 	"github.com/concourse/atc/api/containerserver"
+	"github.com/concourse/atc/api/healthserver"
 	"github.com/concourse/atc/api/infoserver"
 	"github.com/concourse/atc/api/jobserver"
 	"github.com/concourse/atc/api/legacyserver"
@@ -96,6 +97,7 @@ func NewHandler(
 	volumesServer := volumeserver.NewServer(logger, volumeRepository, destroyer)
 	teamServer := teamserver.NewServer(logger, dbTeamFactory, externalURL)
 	infoServer := infoserver.NewServer(logger, version, workerVersion)
+	healthServer := healthserver.NewServer(logger, variablesFactory)
 	legacyServer := legacyserver.NewServer(logger)
 
 	handlers := map[string]http.Handler{
@@ -123,7 +125,10 @@ func NewHandler(
 		atc.PauseJob:       pipelineHandlerFactory.HandlerFor(jobServer.PauseJob),
 		atc.UnpauseJob:     pipelineHandlerFactory.HandlerFor(jobServer.UnpauseJob),
 		atc.JobBadge:       pipelineHandlerFactory.HandlerFor(jobServer.JobBadge),
-		atc.MainJobBadge:   mainredirect.Handler{atc.Routes, atc.JobBadge},
+		atc.MainJobBadge: mainredirect.Handler{
+			Routes: atc.Routes,
+			Route:  atc.JobBadge,
+		},
 
 		atc.ListAllPipelines:    http.HandlerFunc(pipelineServer.ListAllPipelines),
 		atc.ListPipelines:       http.HandlerFunc(pipelineServer.ListPipelines),
@@ -169,6 +174,8 @@ func NewHandler(
 
 		atc.DownloadCLI: http.HandlerFunc(cliServer.Download),
 		atc.GetInfo:     http.HandlerFunc(infoServer.Info),
+
+		atc.CredsHealth: http.HandlerFunc(healthServer.Creds),
 
 		atc.ListContainers:           teamHandlerFactory.HandlerFor(containerServer.ListContainers),
 		atc.GetContainer:             teamHandlerFactory.HandlerFor(containerServer.GetContainer),
