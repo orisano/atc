@@ -72,6 +72,7 @@ func NewHandler(
 	version string,
 	workerVersion string,
 	variablesFactory creds.VariablesFactory,
+	credsManagers creds.Managers,
 	interceptTimeoutFactory containerserver.InterceptTimeoutFactory,
 ) (http.Handler, error) {
 
@@ -97,7 +98,7 @@ func NewHandler(
 	volumesServer := volumeserver.NewServer(logger, volumeRepository, destroyer)
 	teamServer := teamserver.NewServer(logger, dbTeamFactory, externalURL)
 	infoServer := infoserver.NewServer(logger, version, workerVersion)
-	healthServer := healthserver.NewServer(logger, variablesFactory)
+	healthServer := healthserver.NewServer(logger, credsManagers)
 	legacyServer := legacyserver.NewServer(logger)
 
 	handlers := map[string]http.Handler{

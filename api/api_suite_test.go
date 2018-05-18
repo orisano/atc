@@ -16,6 +16,7 @@ import (
 	"github.com/concourse/atc/api"
 	"github.com/concourse/atc/api/accessor"
 	"github.com/concourse/atc/api/auth"
+	"github.com/concourse/atc/creds"
 	"github.com/concourse/atc/creds/credsfakes"
 	"github.com/concourse/atc/db"
 	"github.com/concourse/atc/db/dbfakes"
@@ -55,6 +56,7 @@ var (
 	fakeSchedulerFactory    *jobserverfakes.FakeSchedulerFactory
 	fakeScannerFactory      *resourceserverfakes.FakeScannerFactory
 	fakeVariablesFactory    *credsfakes.FakeVariablesFactory
+	credsManagers           creds.Managers
 	interceptTimeoutFactory *containerserverfakes.FakeInterceptTimeoutFactory
 	interceptTimeout        *containerserverfakes.FakeInterceptTimeout
 	peerURL                 string
@@ -128,7 +130,7 @@ var _ = BeforeEach(func() {
 	fakeDestroyer = new(gcfakes.FakeDestroyer)
 
 	fakeVariablesFactory = new(credsfakes.FakeVariablesFactory)
-
+	credsManagers = make(creds.Managers)
 	var err error
 
 	cliDownloadsDir, err = ioutil.TempDir("", "cli-downloads")
@@ -198,6 +200,7 @@ var _ = BeforeEach(func() {
 		"1.2.3",
 		"4.5.6",
 		fakeVariablesFactory,
+		credsManagers,
 		interceptTimeoutFactory,
 	)
 

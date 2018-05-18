@@ -408,6 +408,7 @@ func (cmd *ATCCommand) constructMembers(
 	dbWorkerBaseResourceTypeFactory := db.NewWorkerBaseResourceTypeFactory(dbConn)
 	dbWorkerTaskCacheFactory := db.NewWorkerTaskCacheFactory(dbConn)
 	resourceFetcherFactory := resource.NewFetcherFactory(lockFactory, clock.NewClock(), dbResourceCacheFactory)
+	credsManagers := cmd.CredentialManagers
 
 	imageResourceFetcherFactory := image.NewImageResourceFetcherFactory(
 		resourceFetcherFactory,
@@ -506,6 +507,7 @@ func (cmd *ATCCommand) constructMembers(
 		radarSchedulerFactory,
 		radarScannerFactory,
 		variablesFactory,
+		credsManagers,
 	)
 
 	if err != nil {
@@ -1123,6 +1125,7 @@ func (cmd *ATCCommand) constructAPIHandler(
 	radarSchedulerFactory pipelines.RadarSchedulerFactory,
 	radarScannerFactory radar.ScannerFactory,
 	variablesFactory creds.VariablesFactory,
+	credsManagers creds.Managers,
 ) (http.Handler, error) {
 
 	checkPipelineAccessHandlerFactory := auth.NewCheckPipelineAccessHandlerFactory(teamFactory)
@@ -1177,6 +1180,7 @@ func (cmd *ATCCommand) constructAPIHandler(
 		Version,
 		WorkerVersion,
 		variablesFactory,
+		credsManagers,
 		containerserver.NewInterceptTimeoutFactory(cmd.InterceptIdleTimeout),
 	)
 }
