@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/concourse/atc/db/migration"
-	"github.com/mattes/migrate/database"
+	"github.com/golang-migrate/migrate/database"
 )
 
 type FakeDriver struct {

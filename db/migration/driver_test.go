@@ -6,7 +6,7 @@ import (
 
 	"github.com/concourse/atc/db/migration"
 	"github.com/concourse/atc/db/migration/migrationfakes"
-	"github.com/mattes/migrate/database"
+	"github.com/golang-migrate/migrate/database"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

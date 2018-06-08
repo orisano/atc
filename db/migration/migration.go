@@ -9,13 +9,13 @@ import (
 	"code.cloudfoundry.org/lager"
 	"github.com/concourse/atc/db/encryption"
 	"github.com/concourse/atc/db/lock"
-	"github.com/mattes/migrate"
-	"github.com/mattes/migrate/database/postgres"
-	"github.com/mattes/migrate/source"
-	"github.com/mattes/migrate/source/go-bindata"
+	"github.com/golang-migrate/migrate"
+	"github.com/golang-migrate/migrate/database/postgres"
+	"github.com/golang-migrate/migrate/source"
+	"github.com/golang-migrate/migrate/source/go-bindata"
 
 	_ "github.com/lib/pq"
-	_ "github.com/mattes/migrate/source/file"
+	_ "github.com/golang-migrate/migrate/source/file"
 )
 
 func NewOpenHelper(driver, name string, lockFactory lock.LockFactory, strategy encryption.Strategy) *OpenHelper {

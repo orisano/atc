@@ -10,7 +10,7 @@ import (
 
 	"github.com/concourse/atc/db/encryption"
 	"github.com/concourse/atc/db/migration/migrations"
-	"github.com/mattes/migrate/database"
+	"github.com/golang-migrate/migrate/database"
 )
 
 //go:generate counterfeiter . Driver

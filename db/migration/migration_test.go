@@ -136,7 +136,7 @@ var _ = Describe("Migration", func() {
 				Expect(err).NotTo(HaveOccurred())
 			})
 
-			It("Forces mattes/migrate to a known first version if migration_version is 189", func() {
+			It("Forces golang-migrate/migrate to a known first version if migration_version is 189", func() {
 				SetupMigrationVersionTableToExistAtVersion(db, 189)
 
 				SetupSchemaFromFile(db, "migrations/1510262030_initial_schema.up.sql")
@@ -155,7 +155,7 @@ var _ = Describe("Migration", func() {
 				ExpectToBeAbleToInsertData(db)
 			})
 
-			It("Runs mattes/migrate if migration_version table does not exist", func() {
+			It("Runs golang-migrate/migrate if migration_version table does not exist", func() {
 
 				migrator := migration.NewMigratorForMigrations(db, lockFactory, strategy, []string{
 					"1510262030_initial_schema.up.sql",
